@@ -6,7 +6,8 @@
 [![Arxiv](https://img.shields.io/badge/Arxiv-2104.00990-purple)](https://arxiv.org/abs/2104.00990)
 
 **[In Defense of Structural Symbolic Representation for Event-Relation Prediction](https://arxiv.org/abs/2301.03410)**<br>
-[Andrew Lu*](https://github.com/Astro-85/), [Xudong Lin*], [Yulei Niu], [Shih-Fu Chang]
+Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
+* indicates equal contribution
 
 This repository includes:
 
