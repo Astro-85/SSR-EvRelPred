@@ -7,7 +7,6 @@
 
 **[In Defense of Structural Symbolic Representation for Event-Relation Prediction](https://arxiv.org/abs/2301.03410)**<br>
 Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
-* indicates equal contribution
 
 This repository includes:
 
