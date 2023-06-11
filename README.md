@@ -3,7 +3,7 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)]
 [![Python](https://img.shields.io/badge/python-3.6-blue)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.5-yellow)
-[![Arxiv](https://img.shields.io/badge/Arxiv-2104.00990-purple)](https://arxiv.org/abs/2104.00990)
+[![Arxiv](https://img.shields.io/badge/Arxiv-2301.03410-purple)](https://arxiv.org/abs/2301.03410)
 
 **[In Defense of Structural Symbolic Representation for Event-Relation Prediction](https://arxiv.org/abs/2301.03410)**<br>
 Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
