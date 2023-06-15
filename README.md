@@ -3,20 +3,15 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)]
 [![Python](https://img.shields.io/badge/python-3.6-blue)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.5-yellow)
-[![Arxiv](https://img.shields.io/badge/Arxiv-2104.00990-purple)](https://arxiv.org/abs/2104.00990)
+[![Arxiv](https://img.shields.io/badge/Arxiv-2301.03410-purple)](https://arxiv.org/abs/2301.03410)
 
 **[In Defense of Structural Symbolic Representation for Event-Relation Prediction](https://arxiv.org/abs/2301.03410)**<br>
-[Andrew Lu](https://github.com/Astro-85/)
-
-VidSitu is a large-scale dataset containing diverse 10-second videos from movies depicting complex situations (a collection of related events). Events in the video are richly annotated at 2-second intervals with verbs, semantic-roles, entity co-references, and event relations.
-
-![](./media/vidsitu-intro.jpg)
+Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
 
 This repository includes:
 
 1. Instructions to install, download and process VidSitu Dataset.
 2. Code to run all experiments provided in the paper along with log files.
-3. Instructions to submit results to the Leaderboard.
 
 # Download
 
@@ -71,58 +66,3 @@ Logs are also stored using [MLFlow](https://www.mlflow.org/docs/latest/tracking.
     Here $TASK can be `vb`, `vb_arg`, `evrel` corresponding to Verb Prediction, Semantic Role Prediction and Event Relation Prediction
 
 
-1. The output format for the files are as follows:
-
-    1. Verb Prediction:
-        ```
-        List[Dict]
-        Dict:
-            # Both lists of length 5. Outer list denotes Events 1-5, inner list denotes Top-5 VerbID predictions
-            pred_vbs_ev: List[List[str]]
-            # Both lists of length 5. Outer list denotes Events 1-5, inner list denotes the scores for the Top-5 VerbID predictions
-            pred_scores_ev: List[List[float]]
-            #the index of the video segment used. Corresponds to the number in {valid|test}_split_file.json
-            ann_idx: int
-        ```
-
-    1. Semantic Role Labeling Prediction
-        ```
-        List[Dict]
-        Dict:
-            # same as above
-            ann_idx: int
-            # The main output used for evaluation. Outer Dict is for Events 1-5.
-            vb_output: Dict[Dict]
-            # The inner dict has the following keys:
-                # VerbID of the event
-                vb_id: str
-                ArgX: str
-                ArgY: str
-                ...
-        ```
-        Note that ArgX, ArgY depend on the specific VerbID
-
-    1. Event Relation Prediction
-        ```
-        List[Dict]
-        Dict:
-            # same as above
-            ann_idx: int
-            # Ouuter list of length 4 and denotes Event Relation {1-3, 2-3, 3-4, 4-5}. Inner list denotes three Event Relations for given Verb+Semantic Role Inputs
-            pred_evrels_ev: List[List[str]]
-            # Scores for the above
-            pred_scores_ev: List[List[float]]
-        ```
-
-    See examples under [docs](docs/)
-
-# Leaderboard (Evaluation on Test Sets)
-
-We maintain three separate leaderboards for each of the three tasks. The leaderboard will accept submissions from April 7th, 2021.
-The output format remains the same as local evaluation.
-
-Here are the leaderboard links:
-
-+ [Verb Prediction](https://leaderboard.allenai.org/vidsitu-verbs/submissions/public)
-+ [Semantic Role Prediction](https://leaderboard.allenai.org/vidsitu-semantic-roles/submissions/public)
-+ [Event Relation Prediction](https://leaderboard.allenai.org/vidsitu-event-relations/submissions/public)
