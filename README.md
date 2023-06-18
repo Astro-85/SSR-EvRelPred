@@ -42,8 +42,6 @@ Please see [INSTALL.md](./INSTALL.md) for detailed instructions
 
 - All model choices are available under `code/mdl_selector.py`
 
-See [EXPTS.md](EXPTS.md) for detailed usage and reproducing numbers in the paper.
-
 # Logging
 
 Logs are stored inside `tmp/` directory. When you run the code with $exp_name the following are stored:
@@ -51,18 +49,3 @@ Logs are stored inside `tmp/` directory. When you run the code with $exp_name th
 - `models/$exp_name.pth`: the model, optimizer, scheduler, accuracy, number of epochs and iterations completed are stored. Only the best model upto the current epoch is stored.
 - `ext_logs/$exp_name.txt`: this uses the `logging` module of python to store the `logger.debug` outputs printed. Mainly used for debugging.
 - `predictions`: the validation outputs of current best model.
-
-Logs are also stored using [MLFlow](https://www.mlflow.org/docs/latest/tracking.html). These can be uploaded to other experiment trackers such as [neptune.ai](https://neptune.ai/), [wandb](https://wandb.ai/site) for better visualization of results.
-
-# Evaluation (Locally)
-
-1. Evaluation scripts are available for the three tasks under `code/evl_fns.py`. The same file is used for leaderboard purposes.
-    If you are using this codebase, the predictions are stored under `tmp/predictions/{expt_id}/valid_0.pkl`.
-    You can evaluate using the following command:
-
-    ```
-    python code/eval_fns.py --pred_file='./tmp/predictions/{expt_id}/valid_0.pkl' --split_type='valid' --task_type=$TASK
-    ```
-    Here $TASK can be `vb`, `vb_arg`, `evrel` corresponding to Verb Prediction, Semantic Role Prediction and Event Relation Prediction
-
-
