@@ -10,6 +10,8 @@ Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
 
 This repository includes:
 
+NOTE: Some necessary modules are temporarily unavailible but will be added in the coming days!
+
 1. Instructions to install, download and process VidSitu Dataset.
 2. Code to run all experiments provided in the paper along with log files.
 
