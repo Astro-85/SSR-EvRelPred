@@ -44,6 +44,8 @@ Please see [INSTALL.md](./INSTALL.md) for detailed instructions
 
 - All model choices are available under `code/mdl_selector.py`
 
+- Train from a previous checkpoint by setting `--train.resume_path='PATH/TO/RESUME.pth'`
+
 - Eg. Training command for contextualized event-sequence RoBERTa using VidSitu dataset `CUDA_VISIBLE_DEVICES=0 python train_vidsitu.py "experiment_name" --task_type='evrel' --mdl.mdl_name='rob_evrel' --train.bs=8 --train.bsv=8 --train.nw=4 --train.nwv=4 --ds.vsitu.evrel_trimmed=False --train.event_sequence=True`
 
 - Eg. Training command for contextualized event-sequence RoBERTa using VisualComet dataset. Currently only single gpu training supported. `CUDA_VISIBLE_DEVICES=0 python train_viscom.py "experiment_name" --task_type='evrel' --mdl.mdl_name='rob_evrel' --train.bs=8 --train.bsv=8 --train.nw=4 --train.nwv=4`
