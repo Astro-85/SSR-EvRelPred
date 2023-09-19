@@ -15,7 +15,7 @@ This repository includes:
 
 # Download
 
-Please see (https://github.com/TheShadow29/VidSitu/blob/main/data/DATA_PREP.md) for detailed instructions on downloading and setting up the dataset.
+Please see https://github.com/TheShadow29/VidSitu/blob/main/data/DATA_PREP.md for detailed instructions on downloading and setting up the dataset.
 
 # Installation
 
