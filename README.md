@@ -26,6 +26,7 @@ Please see [INSTALL.md](./INSTALL.md) for detailed instructions
 
 - Basic usage is `CUDA_VISIBLE_DEVICES=$GPUS python train_vidsitu.py "experiment_name" --arg1=val1 --arg2=val2` and the arg1, arg2 can be found in `configs/vsitu_cfg.yml`.
 
+- For training RoBERTa models using only text annotations, no video features need to be downloaded. We include text annotations for VidSitu and VisualComet in `data/`. Please refer to the [original VidSitu repository](https://github.com/TheShadow29/VidSitu/tree/main) for more details regarding downloading video features and running experiments for verb and argument prediction. 
 
 - Set `$GPUS=0` for single gpu training. For multi-gpu training via Pytorch Distributed Data Parallel use `$GPUS=0,1,2,3`
 
