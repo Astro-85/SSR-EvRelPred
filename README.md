@@ -8,11 +8,6 @@
 **[In Defense of Structural Symbolic Representation for Event-Relation Prediction](https://arxiv.org/abs/2301.03410)**<br>
 Andrew Lu*, Xudong Lin*, Yulei Niu, Shih-Fu Chang
 
-This repository includes:
-
-1. Instructions to install, download and process VidSitu Dataset.
-2. Code to run all experiments provided in the paper along with log files.
-
 # Download
 
 Please see https://github.com/TheShadow29/VidSitu/blob/main/data/DATA_PREP.md for detailed instructions on downloading and setting up the dataset.
