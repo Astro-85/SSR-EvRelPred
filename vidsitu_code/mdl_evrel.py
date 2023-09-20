@@ -15,6 +15,7 @@ from toolz.sandbox import unzip
 from vidsitu_code.mdl_sf_base import get_head_dim
 from transformers import RobertaForSequenceClassification, RobertaModel
 
+torch.manual_seed(123)
     
 class Simple_EvRel_Roberta(nn.Module):
     def __init__(self, cfg, comm):
